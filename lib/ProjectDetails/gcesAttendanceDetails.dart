@@ -1,0 +1,4 @@
+String gcesAttendanceTitle = "GCES Attendance";
+String gcesAttendanceDescription ="GCES Attendance is an Attendance Management System which will help teacher to take attendance and get total attendance and percentage of attendance. College admin can add the new students for the upcoming batches so this website is of future use as well. Teacher could select the batch attendance of more than one batch. Students also could check about their attendance information and get noticed about any kinds of events or holidays in the college.";
+String gcesAttendanceImageUrl = 'assets/images/GCESAttendance.PNG';
+String gcesAttendanceCodeLink = 'https://github.com/Abiral1234/MinorProject1-GCESAttendance';
