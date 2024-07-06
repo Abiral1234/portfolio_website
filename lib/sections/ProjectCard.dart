@@ -67,33 +67,37 @@ class _ProjectCardState extends State<ProjectCard> {
                       Expanded(
                           flex: 4,
                           child: Align(alignment:Alignment.topLeft ,child: Text(widget.description,style: GoogleFonts.raleway(fontSize: 15 ),))),
-                     GestureDetector(
-                        onTap: () async{
-
-                              var url = widget.codeLink;
-                              if(canLaunch(url) != null){
-                               launch(url);
-                              }
-                              else{
-                                throw('Cannot launch the url');
-                              }
-                        },
-                        child: Container(
-                            height: 35,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: Colors.grey.shade200,
-                                style: BorderStyle.solid,
+                     MouseRegion(
+                         cursor: SystemMouseCursors.click,
+                       child: GestureDetector(
+                        
+                          onTap: () async{
+                       
+                                var url = widget.codeLink;
+                                if(canLaunch(url) != null){
+                                 launch(url);
+                                }
+                                else{
+                                  throw('Cannot launch the url');
+                                }
+                          },
+                          child: Container(
+                              height: 35,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: Colors.grey.shade200,
+                                  style: BorderStyle.solid,
+                                ),
+                                color: Colors.lightBlueAccent,
+                                borderRadius: BorderRadius.all(Radius.circular(10)),
                               ),
-                              color: Colors.lightBlueAccent,
-                              borderRadius: BorderRadius.all(Radius.circular(10)),
-                            ),
-                            alignment: Alignment.bottomCenter,
-                            child: Align(
-                                alignment:Alignment.center , child: Text("View Project" ,style: GoogleFonts.raleway(fontSize: 20 , color: Colors.white),),
-                            )
+                              alignment: Alignment.bottomCenter,
+                              child: Align(
+                                  alignment:Alignment.center , child: Text("View Project" ,style: GoogleFonts.raleway(fontSize: 20 , color: Colors.white),),
+                              )
+                          ),
                         ),
-                      ),
+                     ),
                       SizedBox(
                         height: 10,
                       ),

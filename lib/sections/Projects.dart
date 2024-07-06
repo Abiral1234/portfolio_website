@@ -15,7 +15,7 @@ class _ProjectsState extends State<Projects> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.fromLTRB(40, 10, 0, 0),
+          padding: const EdgeInsets.fromLTRB(100, 10, 0, 0),
           child: Align(
               alignment: Alignment.centerLeft,
               child: Text("Projects:" , style: GoogleFonts.raleway(fontSize: 30),)),

@@ -11,38 +11,46 @@ class Footer extends StatelessWidget {
       height: 150,
       color: Colors.black,
       child :
-      Column(
-        children: [
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
+        children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(0,50,0,0),
+            padding: const EdgeInsets.fromLTRB(100,0,0,0),
+            child: Text('Copyright ©, Abiral Pokhrel 2022', style: TextStyle(color: Colors.white),),
+          ),
+        
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0,0,100,0),
             child: Container(
-              width: Get.width/2,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              child: Wrap(
+                alignment: WrapAlignment.end,
+                direction: Axis.horizontal,
+                spacing: 30.0, 
+                
                 children: [
-                  GestureDetector(
-                  onTap: () async{
+                  IconButton(
+                  onPressed: () async{
                       launch("https://t.me/Abiral1234");
                     },
-                      child: FaIcon(FontAwesomeIcons.telegram,color: Color(0xff0088CC),size: 30,)
+                      icon: FaIcon(FontAwesomeIcons.telegram,color: Color(0xff0088CC),size: 30,)
                   ),
-                  GestureDetector(
-                      onTap: () async{
+                  IconButton(
+                      onPressed: () async{
                         launch("https://www.linkedin.com/in/abiral-pokhrel-a3088b212/");
                       },
-                      child:  FaIcon(FontAwesomeIcons.linkedin,color: Color(0xff0072b1),size: 30,),
+                      icon:  FaIcon(FontAwesomeIcons.linkedin,color: Color(0xff0072b1),size: 30,),
                   ),
-                  GestureDetector(
-                      onTap: () async{
+                  IconButton(
+                      onPressed: () async{
                         launch("https://www.instagram.com/abiral_pokhrel/");
                       },
-                      child: FaIcon(FontAwesomeIcons.instagram,color: Color(0xffbc2a8d),size: 30,),),
-                  GestureDetector(
-                      onTap: () async{
+                      icon: FaIcon(FontAwesomeIcons.instagram,color: Color(0xffbc2a8d),size: 30,),),
+                  IconButton(
+                      onPressed: () async{
                         launch("https://soundcloud.com/abiral-681636707");
                       },
-                      child: FaIcon(FontAwesomeIcons.soundcloud,color: Colors.orange,size: 30,),
+                      icon: FaIcon(FontAwesomeIcons.soundcloud,color: Colors.orange,size: 30,),
                   ),
 
 
@@ -52,10 +60,8 @@ class Footer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 15,
-          ),
-          Align( alignment:Alignment.center ,child: Text('Copyright ©, Abiral Pokhrel 2022', style: TextStyle(color: Colors.white),)),
+          
+          
         ],
       )
     );
