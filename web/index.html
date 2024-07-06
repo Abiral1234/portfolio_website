@@ -29,12 +29,24 @@
   <link rel="icon" type="image/png" href="favicon.png"/>
 
   <title>portfolio_website</title>
+    <!-- Lottie Web Player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest"></script>
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
+       <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+       </style>
   <script>
     var serviceWorkerVersion = null;
     var scriptLoaded = false;
@@ -99,5 +111,13 @@
       loadMainDartJs();
     }
   </script>
+ <lottie-player 
+ src="loader.json" 
+ background="transparent" 
+ speed="1" 
+ style="width: 300px; height: 300px;" 
+ loop 
+ autoplay>
+</lottie-player>
 </body>
 </html>

@@ -52,80 +52,86 @@ class ContactMe extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                    child: MouseRegion(
+                      cursor: SystemMouseCursors.click,
+                      child: GestureDetector(
+                        onTap: (){
+                          final toEmail ='abiral.pokhrel99@gmail.com';
+                          final subject = '';
+                          final body = '';
+                          final url = 'mailto:$toEmail';
+                          launch(url);
+                      
+                        },
+                        child: Container(
+                            decoration:BoxDecoration(
+                              border: Border.all(
+                              color: Colors.grey.shade200,
+                              style: BorderStyle.solid,
+                              ),
+                        boxShadow: [
+                        BoxShadow(
+                            color: Colors.blueGrey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 5,
+                            offset: Offset(0, 3), // changes position of shadow
+                          ),
+                          ],
+                          color: Colors.lightBlueAccent,
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5.0),
+                                    child: Icon(Icons.waving_hand_sharp,color: Colors.white,),
+                                  ),
+                                  Text("Hire Me",style:GoogleFonts.raleway(color: Colors.white)),
+                                ],
+                              ),
+                            )
+                        ),
+                      ),
+                    ),
+                  ),
+                  MouseRegion(
+                     cursor: SystemMouseCursors.click,
                     child: GestureDetector(
                       onTap: (){
-                        final toEmail ='abiral.pokhrel99@gmail.com';
-                        final subject = '';
-                        final body = '';
-                        final url = 'mailto:$toEmail';
-                        launch(url);
-
+                        downloadFile('/lib/Abiral Pokhrel CV.pdf');
                       },
                       child: Container(
                           decoration:BoxDecoration(
                             border: Border.all(
-                            color: Colors.grey.shade200,
-                            style: BorderStyle.solid,
+                              color: Colors.grey.shade200,
+                              style: BorderStyle.solid,
                             ),
-                      boxShadow: [
-                      BoxShadow(
-                          color: Colors.blueGrey.withOpacity(0.2),
-                          spreadRadius: 2,
-                          blurRadius: 5,
-                          offset: Offset(0, 3), // changes position of shadow
-                        ),
-                        ],
-                        color: Colors.lightBlueAccent,
-                        borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.blueGrey.withOpacity(0.2),
+                                spreadRadius: 2,
+                                blurRadius: 5,
+                                offset: Offset(0, 3), // changes position of shadow
+                              ),
+                            ],
+                            color: Colors.greenAccent,
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: Row(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                                  child: Icon(Icons.waving_hand_sharp,color: Colors.white,),
+                                  child: Icon(Icons.download ,color: Colors.white,),
                                 ),
-                                Text("Hire Me",style:GoogleFonts.raleway(color: Colors.white)),
+                                Text("Download CV",style:GoogleFonts.raleway(color: Colors.white)),
                               ],
                             ),
                           )
                       ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: (){
-                      downloadFile('/lib/Abiral Pokhrel CV.pdf');
-                    },
-                    child: Container(
-                        decoration:BoxDecoration(
-                          border: Border.all(
-                            color: Colors.grey.shade200,
-                            style: BorderStyle.solid,
-                          ),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.blueGrey.withOpacity(0.2),
-                              spreadRadius: 2,
-                              blurRadius: 5,
-                              offset: Offset(0, 3), // changes position of shadow
-                            ),
-                          ],
-                          color: Colors.greenAccent,
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 5.0),
-                                child: Icon(Icons.download ,color: Colors.white,),
-                              ),
-                              Text("Download CV",style:GoogleFonts.raleway(color: Colors.white)),
-                            ],
-                          ),
-                        )
                     ),
                   ),
                 ],

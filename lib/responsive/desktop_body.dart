@@ -25,28 +25,30 @@ class _MyDesktopBodyState extends State<MyDesktopBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         body: SafeArea(
           child: Container(
             child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TopSection(),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: Get.width/2,
+                      width: MediaQuery.of(context).size.width/2.2,
                         child: AboutMe()
                     ),
                     Container(
-                        width: Get.width/2,
+                        width: MediaQuery.of(context).size.width/2.2,
                         child: ContactMe()),
                   ],
                 ),
                 Projects(),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 8.0,horizontal: 80),
                   child: GridView.count(
                     physics: NeverScrollableScrollPhysics(),
                     crossAxisCount: 3,

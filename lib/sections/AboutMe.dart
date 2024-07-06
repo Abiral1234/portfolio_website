@@ -35,8 +35,9 @@ class AboutMe extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
-              child: Text('I am a full time flutter developer who has been studying software engineering for more than 2 years in GCES . I have created a few websites and currently working on creating apps on flutter.', style: GoogleFonts.raleway(fontSize: 15)),
-            ),
+              child: Text(
+                '''A highly skilled Flutter Developer with more than 2 years of experience in mobile app development.Adept at delivering high-quality, efficient, and user-centric applications.Committed to best coding practices and design principles.'''
+              ),),
           ],
         ),
       ),
