@@ -10,33 +10,42 @@ class AboutMe extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Container(
         height: 200,
-        decoration: BoxDecoration(
+        decoration:  BoxDecoration(
           border: Border.all(
             color: Colors.grey.shade200,
+            style: BorderStyle.solid,
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.blueGrey.withOpacity(0.1),
-              spreadRadius: 3,
+              color: Colors.blueGrey.withOpacity(0.2),
+              spreadRadius: 8,
               blurRadius: 10,
               offset: Offset(0, 3), // changes position of shadow
             ),
           ],
-            color: Colors.white,
-            borderRadius: BorderRadius.all(Radius.circular(20)),
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
 
         padding: EdgeInsets.all(10),
 
         child: Column(
           children: [
-            Align( alignment: Alignment.centerLeft,
-                child: Text('About Me', style: GoogleFonts.raleway(fontSize: 35) )
+            Padding(
+               padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: Align( alignment: Alignment.centerLeft,
+                  child: Text('About Me', style: GoogleFonts.raleway(fontSize: 30) )
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
-              child: Text(
-                '''A highly skilled Flutter Developer with more than 2 years of experience in mobile app development.Adept at delivering high-quality, efficient, and user-centric applications.Committed to best coding practices and design principles.'''
+              padding: const EdgeInsets.fromLTRB(10, 15, 10, 15),
+              child: Center(
+                child: Text(
+                 
+                  '''A highly skilled Flutter Developer with years of experience in mobile app development.Adept at delivering high-quality, efficient, and user-centric applications.''',
+                  overflow: TextOverflow.fade,
+                style: GoogleFonts.raleway(fontSize: 15 )
+                ),
               ),),
           ],
         ),

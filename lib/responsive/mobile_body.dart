@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:portfolio_webiste/sections/ContactMe.dart';
 import 'package:portfolio_webiste/sections/Footer.dart';
 import 'package:portfolio_webiste/sections/ListView1.dart';
@@ -19,24 +16,29 @@ class MyMobileBody extends StatefulWidget {
 class _MyMobileBodyState extends State<MyMobileBody> {
   @override
   Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
         child: Container(
           child: SingleChildScrollView(
-            child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    TopSection(),
-                    AboutMe(),
-                    Projects(),
-                    ListView1(),
-                    ContactMe(),
-                    Footer(),
-                    ],
+            child: Container(
+              height: height,
+              child: ListView(
+                shrinkWrap: true,
+                // crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  TopSection(),
+                  AboutMe(),
+                  Projects(),
+                  ListView1(),
+                  ContactMe(),
+                  Footer(),
+                ],
               ),
             ),
-            ),
+          ),
+        ),
       ),
     );
   }

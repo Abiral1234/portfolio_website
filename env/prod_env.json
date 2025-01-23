@@ -1,0 +1,20 @@
+{
+  "GOOGLE_API_KEY": "AIzaSyCgyt8P0rXM_v0sESHJwjfuCLFxRgRYHU4",
+  "AID_BOX_URL": "https://aidbox.shoprideon.com/",
+  "FLASK_URL": "https://flaskprod.shoprideon.com/",
+  "SHOPRIDEON_URL":"https://store.shoprideon.com/",
+  "P_VERIFY_URL": "https://api.pverify.com/test",
+  "NPI_REGISTRY_URL": "https://npiregistry.cms.hhs.gov/api",
+  "DOCUSIGN_URL": "https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature",
+  "PROXY_SERVER_URL": "https://flaskprod.shoprideon.com/",
+  "FLASK_WEBSOCKET_URL": "https://flaskprod.shoprideon.com/",
+  "EPIC_CLIENT_ID": "598376e0-11d0-4e9a-9606-d1529390edd5",
+  "EPIC_BASE_URL":"https://fhir.epic.com/interconnect-fhir-oauth/",
+  "AUTH0_BASE_URL":"https://dev-hzeb55fj.us.auth0.com",
+  "AUTH0_REFRESH_URL":"https://flaskprod.shoprideon.com/",
+  "CERNER_CLIENT_ID": "012b9301-560d-4749-9bee-5bd25bf21dec",
+  "OAUTH2_REDIRECT_URI": "https://rideon.shoprideon.com/static.html",
+  "CLAIM_REV_URL":"https://api.claimrev.com",
+  "SIGNNOW_URL" : "https://cors-anywhere.herokuapp.com/https://api.signnow.com",
+  "AUTH0APP": "rideonprod"
+}
