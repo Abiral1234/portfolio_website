@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:get/get.dart';
-import 'package:lottie/lottie.dart';
+import 'package:portfolio_webiste/core/responsive_widget.dart';
 
 
 class TopSection extends StatefulWidget {
@@ -47,6 +45,8 @@ class _TopSectionState extends State<TopSection> with SingleTickerProviderStateM
   }
   @override
   Widget build(BuildContext context) {
+    bool isSmallScreen = (ResponsiveWidget.isSmall(context) ||
+        ResponsiveWidget.isXSmall(context));
     return Stack(
       children: [
           
@@ -100,12 +100,12 @@ class _TopSectionState extends State<TopSection> with SingleTickerProviderStateM
           width: MediaQuery.of(context).size.width,
           
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(100,30,100,30.0),
+            padding: isSmallScreen ? EdgeInsets.fromLTRB(0, 30, 0, 30):EdgeInsets.fromLTRB(100,30,100,30.0),
             child: Container(
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: isSmallScreen ? MainAxisAlignment.center:MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
+                  (!isSmallScreen) ?Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       AnimatedTextKit(
@@ -138,7 +138,7 @@ class _TopSectionState extends State<TopSection> with SingleTickerProviderStateM
                       ),
                       
                     ],
-                  ),
+                  ):Container(),
                   CircleAvatar(
                     backgroundImage: AssetImage('assets/images/capture.PNG'),
                   radius: 80,

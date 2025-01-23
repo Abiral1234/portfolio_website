@@ -1,10 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:portfolio_webiste/sections/ContactMe.dart';
 import 'package:portfolio_webiste/sections/Footer.dart';
-import 'package:portfolio_webiste/sections/ListView1.dart';
 import 'package:portfolio_webiste/sections/Projects.dart';
 import 'package:portfolio_webiste/sections/TopSection.dart';
 import '../ProjectDetails/EAcademiaDetails.dart';
